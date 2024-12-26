@@ -336,4 +336,3 @@ app.delete('/api/documents/:id', limiter, authenticate, async (req, res) => {
 });
 
 export default app;
-
