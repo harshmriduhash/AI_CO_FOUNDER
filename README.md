@@ -1,8 +1,8 @@
 # AIFounder - Your AI Co-Founder Platform
 
-AIFounder is an advanced AI platform designed to help entrepreneurs build and scale their startups. It provides AI-powered insights, code generation, document creation, and strategic planning capabilities.
+An advanced AI platform designed to help entrepreneurs build and scale their startups. It provides AI-powered insights, code generation, document creation, and strategic planning capabilities.
 
-![AIFounder Platform](https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2070&q=80)
+![AIFounder Platform]
 
 ## 🚀 Features
 
