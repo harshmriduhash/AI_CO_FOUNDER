@@ -1,47 +1,47 @@
-import React from 'react';
-import { Shield, Check, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../store/authStore';
+import React from "react";
+import { Shield, Check, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "../store/authStore";
 
 const plans = [
   {
-    name: 'Starter',
-    price: '49',
+    name: "Starter",
+    price: "49",
     features: [
-      'Basic AI insights',
-      'Strategic planning',
-      '24/7 chat support',
-      'Performance analytics',
-      '1 project'
-    ]
-  },
-  {
-    name: 'Pro',
-    price: '149',
-    features: [
-      'Advanced AI insights',
-      'Custom strategy development',
-      'Priority support',
-      'Advanced analytics',
-      '5 projects',
-      'Team collaboration',
-      'API access'
+      "Basic AI insights",
+      "Strategic planning",
+      "24/7 chat support",
+      "Performance analytics",
+      "1 project",
     ],
-    popular: true
   },
   {
-    name: 'Enterprise',
-    price: '499',
+    name: "Pro",
+    price: "149",
     features: [
-      'Full AI capabilities',
-      'Dedicated AI instance',
-      '24/7 priority support',
-      'Custom integrations',
-      'Unlimited projects',
-      'Advanced security',
-      'Custom reporting'
-    ]
-  }
+      "Advanced AI insights",
+      "Custom strategy development",
+      "Priority support",
+      "Advanced analytics",
+      "5 projects",
+      "Team collaboration",
+      "API access",
+    ],
+    popular: true,
+  },
+  {
+    name: "Enterprise",
+    price: "499",
+    features: [
+      "Full AI capabilities",
+      "Dedicated AI instance",
+      "24/7 priority support",
+      "Custom integrations",
+      "Unlimited projects",
+      "Advanced security",
+      "Custom reporting",
+    ],
+  },
 ];
 
 export default function PaywallModal() {
@@ -54,14 +54,16 @@ export default function PaywallModal() {
       const subscription = {
         id: crypto.randomUUID(),
         plan: plan.toLowerCase(),
-        status: 'active',
-        expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
+        status: "active",
+        expiresAt: new Date(
+          Date.now() + 30 * 24 * 60 * 60 * 1000
+        ).toISOString(),
       };
-      
+
       updateSubscription(subscription);
-      navigate('/dashboard');
+      navigate("/dashboard");
     } catch (error) {
-      console.error('Subscription error:', error);
+      console.error("Subscription error:", error);
     }
   };
 
@@ -72,7 +74,7 @@ export default function PaywallModal() {
           <Shield className="h-16 w-16 text-blue-500 mx-auto mb-6" />
           <h2 className="text-3xl font-bold mb-4">Choose Your Plan</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Get started with AIFounder and transform your startup journey. 
+            Get started with AIFounder and transform your startup journey.
             Select the plan that best fits your needs.
           </p>
         </div>
@@ -83,8 +85,8 @@ export default function PaywallModal() {
               key={plan.name}
               className={`relative p-6 rounded-xl ${
                 plan.popular
-                  ? 'bg-gradient-to-b from-blue-600/20 to-purple-600/20 ring-2 ring-blue-500'
-                  : 'bg-gray-800/50'
+                  ? "bg-gradient-to-b from-blue-600/20 to-purple-600/20 ring-2 ring-blue-500"
+                  : "bg-gray-800/50"
               }`}
             >
               {plan.popular && (
@@ -114,8 +116,8 @@ export default function PaywallModal() {
                 onClick={() => handleSubscribe(plan.name)}
                 className={`w-full py-3 rounded-lg flex items-center justify-center group ${
                   plan.popular
-                    ? 'bg-blue-500 hover:bg-blue-600'
-                    : 'bg-blue-600 hover:bg-blue-700'
+                    ? "bg-blue-500 hover:bg-blue-600"
+                    : "bg-blue-600 hover:bg-blue-700"
                 }`}
               >
                 Get Started

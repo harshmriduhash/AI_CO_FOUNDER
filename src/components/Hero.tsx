@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Sparkles, Bot, Cpu } from 'lucide-react';
+import React from "react";
+import { ArrowRight, Sparkles, Bot, Cpu } from "lucide-react";
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -19,23 +19,27 @@ export default function Hero({ onGetStarted }: HeroProps) {
           <div className="flex items-center justify-center space-x-4 mb-6">
             <Bot className="h-12 w-12 text-blue-500 animate-float" />
             <Sparkles className="h-8 w-8 text-purple-500 animate-pulse" />
-            <Cpu className="h-12 w-12 text-blue-500 animate-float" style={{ animationDelay: '2s' }} />
+            <Cpu
+              className="h-12 w-12 text-blue-500 animate-float"
+              style={{ animationDelay: "2s" }}
+            />
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold">
-            Your{' '}
+            Your{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 animate-pulse-slow">
               AI Co-Founder
             </span>
           </h1>
-          
+
           <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Transform your startup journey with an AI partner that never sleeps. 
-            Get instant insights, strategic planning, and execution support 24/7.
+            Transform your startup journey with an AI partner that never sleeps.
+            Get instant insights, strategic planning, and execution support
+            24/7.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <button 
+            <button
               onClick={onGetStarted}
               className="button-primary group flex items-center justify-center"
             >
