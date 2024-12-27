@@ -28,7 +28,7 @@ export default class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center p-8 glass-card rounded-lg max-w-lg">
-            <h1 className="text-2xl font-bold text-red-500 mb-4">Something went wrong</h1>
+            <h1 className="text-2xl font-bold text-red-500 mb-4">Oops..Something went wrong</h1>
             <p className="text-gray-300 mb-4">We apologize for the inconvenience. Please try refreshing the page.</p>
             <button
               onClick={() => window.location.reload()}
