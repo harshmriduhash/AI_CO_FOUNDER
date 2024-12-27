@@ -46,10 +46,6 @@ export default function Hero({ onGetStarted }: HeroProps) {
               Start Building
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="button-secondary flex items-center justify-center group">
-              Watch Demo
-              <Sparkles className="ml-2 group-hover:rotate-12 transition-transform" />
-            </button>
           </div>
 
           <div className="mt-16 relative">
